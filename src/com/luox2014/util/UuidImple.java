@@ -14,4 +14,10 @@ public class UuidImple {
 		System.out.println(uuid.getUuid());
 	}
 */
+	public static void main(String[] args) {
+		int a;
+		a=0 ;
+		++a;
+		System.out.println(a);
+	}
 }
