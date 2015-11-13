@@ -8,31 +8,6 @@
 <script type="text/javascript" src="resources/js/ScrollPic.js"></script>
 <script type="text/javascript" src="resources/js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
-
-
-/* $(document).ready(function(){
-	$.ajax({
-		url:"GetArticleAction",
-		type:"post",	//数据发送方式
-		async:false,
-	 	params:{
-			mark:"工作学习",
-			num:5,
-			sort:"article_date",
-		}, 
-		dataType:"json", //接受数据格式
-		error:function(){
-			alert("服务器没有返回数据，可能服务器忙，请重试");
-		},
-		success:function(json){
-			var listArray = eval(json).titlelist;
-			for(var i = 0;i<listArray.length;i++){
-				$("ul_work ul").append("<li>"+listArray[i]+"</li>");
-			}
-		}
-	}
-	)
-}); */
 $(document).ready(
 		function(){
 			$.ajax(
@@ -45,19 +20,11 @@ $(document).ready(
 				},
 				success:function(data){
 					var data = eval("("+data+")");
-					//console.log(string);
-					//alert(data.Article[0].ArticleTitle[0]);
 					var b ;
 					for(i = 0;i<data.ArticleTitle.length;i++){
 						b = i+1;
 						$("#ul_work ul").append("<li><span class=\"num-top\">"+b+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+data.ArticleTitle[i]+"</a></li>");
-						
-//<li><span class="num-top">3</span><a title="测试文字"
-						//href="**.jsp?id=123">测试文字测试文字 </a></li>						
-						//alert(data.ArticleTitle[i]);
 					}
-					
-					
 				}
 			}		
 			)
@@ -65,18 +32,6 @@ $(document).ready(
 		}
 		
 		);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -91,17 +46,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
