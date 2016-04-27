@@ -8,16 +8,24 @@ import com.luox2014.dao.ArticleDaoImpl;
 
 public class ArticleServiceImpl implements ArticleService {
 
-	private ArticleDao dao = new ArticleDaoImpl();
+	private ArticleDao articleDao;
+	
+	
+	public ArticleDao getArticleDao() {
+		return articleDao;
+	}
+	public void setArticleDao(ArticleDao articleDao) {
+		this.articleDao = articleDao;
+	}
 	@Override
 	public List<Article> queryArticle(String article_id) {
 		// TODO Auto-generated method stub
-		return dao.queryArticle(article_id);
+		return articleDao.queryArticle(article_id);
 	}
 	@Override
 	public List<Article> queryArticle2(String mark, int num, String sort) {
 		// TODO Auto-generated method stub
-		return dao.queryArticle2( mark, num, sort);
+		return articleDao.queryArticle2( mark, num, sort);
 	}
 
 
