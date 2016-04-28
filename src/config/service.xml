@@ -14,9 +14,9 @@
 	<bean id="testServiceImpl" class="com.luox2014.service.TestServiceImpl">
 	<property name="testDao" ref="testDaoImpl"></property>
 	</bean>
-	<!-- <bean id="testServicess" class="com.luox2014.controller.TestController">
+	<bean id="testServicess" class="com.luox2014.controller.TestController">
 	<property name="testService" ref="testServiceImpl"></property>
-	</bean> -->
+	</bean>
 	
 	
 	<!-- <bean id="articleDaoImpl" class="com.luox2014.dao.ArticleDaoImpl"></bean>
