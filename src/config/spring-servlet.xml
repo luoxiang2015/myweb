@@ -8,9 +8,10 @@
 		http://www.springframework.org/schema/mvc  http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+
 	<!-- 启用spring mvc 注解 -->
 	<context:annotation-config />
-
 	<!-- 设置使用注解的类所在的jar包 -->
 	<context:component-scan base-package="com"></context:component-scan>
 
@@ -25,6 +26,7 @@
 			</list>
 		</property>
 	</bean>
+
 	<bean id="stringHttpMessageConverter"
 		class="org.springframework.http.converter.StringHttpMessageConverter">
 		<property name="supportedMediaTypes">
@@ -37,13 +39,15 @@
 		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
 		<property name="supportedMediaTypes">
 			<list>
-				<value>application/json</value>
+				<value>application/json;charset=UTF-8</value>
 			</list>
 		</property>
 	</bean>
 
 	<!-- Configures support for @Controllers -->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven >
+   </mvc:annotation-driven>
+   
 	<mvc:default-servlet-handler />
 
 	<!-- 对转向页面的路径解析。prefix：前缀， suffix：后缀 -->
