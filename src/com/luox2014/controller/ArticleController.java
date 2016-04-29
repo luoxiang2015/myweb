@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -40,9 +41,11 @@ public class ArticleController {
 	@RequestMapping(value="getBlog")
 	public ModelAndView getBlogHtml(HttpServletRequest req){
 		
-		Map<String,Object> map = new HashMap<String,Object>();
-		map.put("test", "success");
-		return new ModelAndView("blog",map);
+		List<Article> list = articleService.queryArticleTop(10);
+		ModelMap model = new ModelMap();
+		model.addAttribute("articleList", list);
+		
+		return new ModelAndView("blog",model);
 	}
 	
 

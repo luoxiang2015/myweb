@@ -13,6 +13,7 @@
 	<property name="article_date"></property>
 	<property name="article_mark"></property>
 	<property name="article_title"></property>
+	<property name="create_time"></property>
 	
 	
 	

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<!-- 导入jstl 标签库 -->
+<%@ include file="/resources/jsp/taglib.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +10,6 @@
 <link rel="stylesheet" type="text/css" href="/myweb/resources/css/2.css">
 <script type="text/javascript" src="/myweb/resources/js/ScrollPic.js"></script>
 <script type="text/javascript" src="/myweb/resources/js/jquery-1.8.2.min.js"></script>
-
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -58,7 +59,16 @@ var _hmt = _hmt || [];
 			
 			<div class="artlist"> 
 				<ul>
-					<li>
+				<c:forEach var="model" items="${articleList}">
+				<li>
+						<h3> <a> ${model.article_title } </a></h3>
+						<span>${model.article_date }</span>
+						<span>${model.article_author }</span>
+						<span>${model.article_content }</span>
+						
+					</li>
+				</c:forEach>
+					<!-- <li>
 						<h3> <a> title link </a></h3>
 						<span>span date</span>
 						<span>span read</span>
@@ -82,7 +92,7 @@ var _hmt = _hmt || [];
 					<li>1</li>
 					<li>1</li>
 					<li>1</li>
-					<li>1</li>
+					<li>1</li> -->
 				
 				</ul>
 				

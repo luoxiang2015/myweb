@@ -43,5 +43,15 @@ public class ArticleDaoImpl implements ArticleDao{
             return articleList;
 	}
 
+	@Override
+	public List<Article> queryArticleTop(int sum) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.openSession();
+		Query q = session.createSQLQuery("SELECT * FROM t_article ORDER BY create_time desc LIMIT "+sum).addEntity(Article.class);
+		ArrayList<Article> articleList= (ArrayList<Article>) q.list();
+		session.close();
+        return articleList;
+	}
+
 
 }

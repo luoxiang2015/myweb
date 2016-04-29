@@ -26,6 +26,12 @@ public class ArticleServiceImpl implements ArticleService {
 		// TODO Auto-generated method stub
 		return articleDao.queryArticle(mark, num, sort);
 	}
+
+	@Override
+	public List<Article> queryArticleTop(int sum) {
+		// TODO Auto-generated method stub
+		return articleDao.queryArticleTop(sum);
+	}
 	
 
 

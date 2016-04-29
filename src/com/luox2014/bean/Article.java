@@ -1,6 +1,8 @@
 package com.luox2014.bean;
 
+import java.sql.Timestamp;
 import java.util.Date;
+
 
 public class Article {
 private String article_id;
@@ -9,6 +11,7 @@ private String article_title;
 private String article_content;
 private int article_mark;
 private Date article_date;
+private Timestamp create_time;
 public String getArticle_id() {
 	return article_id;
 }
@@ -44,6 +47,12 @@ public Date getArticle_date() {
 }
 public void setArticle_date(Date article_date) {
 	this.article_date = article_date;
+}
+public Timestamp getCreate_time() {
+	return create_time;
+}
+public void setCreate_time(Timestamp create_time) {
+	this.create_time = create_time;
 }
 
 
