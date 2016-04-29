@@ -93,44 +93,14 @@ $(document).ready(
 
 </script>
 
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c4178d0b18e37283c9b35a9de559e511";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-
 
 
 <title>小罗的个人博客-我的主页</title>
 </head>
 <body>
+<%@ include file="/resources/jsp/head.jsp" %>
 	<div id="main">
-		<!-- head start -->
-		<div id="head">
-			<div id="logo">
-				<div class="lg"></div>
-				<h3>小罗的个人博客</h3>
-			</div>
-			<div id="nav">
-				<ul>
-					<li class="sel"><a href="/myweb/home/home.do">首页</a></li>
-					<li><a href="/myweb/article/getBlog.do">博客</a></li>
-					<li><a href="photo.jsp">相册</a></li>
-					<li><a href="downlist.jsp">资源</a></li>
-					<li><a href="link.jsp">收藏</a></li>
-					<li><a href="map.html">旅行</a></li>
-					<li><a href="post.jsp">留言</a></li>
-					<li><a href="myself.jsp">关于我</a></li>
-				</ul>
-			</div>
-
-		</div>
+		
 		<!-- left start -->
 		<div id="sidebar">
 			<div class="nav-title">
@@ -498,28 +468,9 @@ var _hmt = _hmt || [];
 				</ul>
 			</div>
 		</div>
-		<div class="con_5">
-			<div class="nav-title">
-				<div class="nav-title-lift">友情链接</div>
-				<div class="nav-title-right">
-					<a class="more" href="blog.jsp">申请友链</a>
-				</div>
-			</div>
-			<div class="con_fri">
-				|<a>测试文字1</a>|<a>测试文字2</a>|<a>测试文字3</a>|<a>测试文字4</a>|<a>测试文字5</a>|<a>测试文字6</a>|
-			</div>
-		</div>
-	<div id="footer">
-<!--   <p><a href="link.jsp?types=1">友情链接</a>|<a href="myself.jsp">关于我们</a>|<a href="post.jsp">给我留言</a>|<a href="site.jsp">站点地图</a></p>
-  <p>本站部分文章、资源来自互联网，版权归原作者及网站所有，如果侵犯了您的权利，请及时致信告知我站.</p>
-  <p>版权声明：凡文章来源注明为本站的文章、图片、视频等信息，请在转载时保留本站链接。</p>
-  <p>©2013-2015 小罗个人网站,All Rights Reserved.</p> 
-  <p>访问统计：你是本站第    <a href="visit.jsp" id="visitID">95243</a>  位访客</p>
-  <p><a href="http://www.miibeian.gov.cn" target="_blank">渝ICP备13006414号-1</a></p>
-  <p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cdiv id='cnzz_stat_icon_1000021889'%3E%3C/div%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000021889%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p><div id="cnzz_stat_icon_1000021889"><a href="http://www.cnzz.com/stat/website.php?web_id=1000021889" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="http://icon.cnzz.com/img/pic.gif"></a></div><script src=" http://s22.cnzz.com/z_stat.php?id=1000021889&amp;show=pic" type="text/javascript"></script><script src="http://c.cnzz.com/core.php?web_id=1000021889&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script><p></p>
-  -->
-  <script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc4178d0b18e37283c9b35a9de559e511' type='text/javascript'%3E%3C/script%3E"));</script>
-</div>
+		
+		<%@ include file="/resources/jsp/footer.jsp" %>
+		
 	</div>
 	
 

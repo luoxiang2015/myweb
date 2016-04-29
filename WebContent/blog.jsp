@@ -10,44 +10,12 @@
 <link rel="stylesheet" type="text/css" href="/myweb/resources/css/2.css">
 <script type="text/javascript" src="/myweb/resources/js/ScrollPic.js"></script>
 <script type="text/javascript" src="/myweb/resources/js/jquery-1.8.2.min.js"></script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?c4178d0b18e37283c9b35a9de559e511";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-
-
-
-
 <title>小罗的个人博客-我的博客</title>
 </head>
 <body>
+<%@ include file="/resources/jsp/head.jsp" %>
 	<div id="main">
-		<!-- head start -->
-		<div id="head">
-			<div id="logo">
-				<div class="lg"></div>
-				<h3>小罗的个人博客</h3>
-			</div>
-			<div id="nav">
-				<ul>
-					<li><a href="/myweb/home/home.do">首页</a></li>
-					<li class="sel"><a href="/myweb/article/getBlog.do">博客</a></li>
-					<li><a href="photo.jsp">相册</a></li>
-					<li><a href="downlist.jsp">资源</a></li>
-					<li><a href="link.jsp">收藏</a></li>
-					<li><a href="map.html">旅行</a></li>
-					<li><a href="post.jsp">留言</a></li>
-					<li><a href="myself.jsp">关于我</a></li>
-				</ul>
-			</div>
-
-		</div>
+		
 		<h1>日志</h1>
 		<!-- left start -->
 		<div id="sidebar">
@@ -68,31 +36,6 @@ var _hmt = _hmt || [];
 						
 					</li>
 				</c:forEach>
-					<!-- <li>
-						<h3> <a> title link </a></h3>
-						<span>span date</span>
-						<span>span read</span>
-						<span>span say</span>
-						
-					</li>
-					
-					<li>
-						<h3> <a> title link </a></h3>
-						<span>span date</span>
-						<span>span read</span>
-						<span>span say</span>
-						
-					</li>
-					
-
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li>
-					<li>1</li> -->
 				
 				</ul>
 				
@@ -121,24 +64,8 @@ var _hmt = _hmt || [];
 
 		</div>
 		
-		<div style="clear: both;"></div>
-
-		<div class="con_5">
-			<div class="nav-title">
-				<div class="nav-title-lift">友情链接</div>
-				<div class="nav-title-right">
-					<a class="more" href="blog.jsp">申请友链</a>
-				</div>
-			</div>
-			<div class="con_fri">
-				|<a>测试文字1</a>|<a>测试文字2</a>|<a>测试文字3</a>|<a>测试文字4</a>|<a>测试文字5</a>|<a>测试文字6</a>|
-			</div>
-		</div>
-		
-	<div id="footer">
-
-
-</div>
+		<%@ include file="/resources/jsp/footer.jsp" %>
+	
 	</div>
 	
 
