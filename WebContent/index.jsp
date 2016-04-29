@@ -12,7 +12,7 @@ $(document).ready(
 		
 		function(){
 			
-			$.getJSON("/myweb/article/getTitle.do",function(data){  
+			$.getJSON("/myweb/article/getTitle.do",{code:2},function(data){  
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].article_title);
@@ -21,6 +21,51 @@ $(document).ready(
 				  
 				}); 
 			
+			$.getJSON("/myweb/article/getTitle.do",{code:1},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].article_title);
+				  $("#ul_mood ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].article_title +"</a></li>");
+				   });  
+				  
+				}); 
+			
+			$.getJSON("/myweb/article/getTitle.do",{code:3},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].article_title);
+				  $("#ul_amusing ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].article_title +"</a></li>");
+				   });  
+				  
+				}); 
+			
+			
+			$.getJSON("/myweb/article/getTitle.do",{code:4},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].article_title);
+				  $("#ul_down ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].article_title +"</a></li>");
+				   });  
+				  
+				});
+			
+			$.getJSON("/myweb/article/getTitle.do",{code:5},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].article_title);
+				  $("#ul_code ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].article_title +"</a></li>");
+				   });  
+				  
+				});
+			
+			$.getJSON("/myweb/article/getTitle.do",{code:6},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].article_title);
+				  $("#ul_study ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].article_title +"</a></li>");
+				   });  
+				  
+				});
 			
 			/* $.ajax(
 			{
@@ -377,7 +422,7 @@ var _hmt = _hmt || [];
 		<!-- 修改span时去 1.css 中删除  .con_4 .con_list li 属性。 -->
 		<div class="con_4">
 			<!-- 心情日记 -->
-			<div class="con_list" style="float: left; width: 315px;">
+			<div id="ul_mood" class="con_list" style="float: left; width: 315px;">
 				<div class="nav-title">
 					<div class="nav-title-lift">心情日记</div>
 					<div class="nav-title-right">
@@ -385,26 +430,6 @@ var _hmt = _hmt || [];
 					</div>
 				</div>
 				<ul>
-					<li><span class="num-top">1</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">2</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">3</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">4</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">5</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">6</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">7</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">8</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">9</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">10</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
 				</ul>
 			</div>
 			<!-- 工作学习 -->
@@ -419,7 +444,7 @@ var _hmt = _hmt || [];
 				</ul>
 			</div>
 			<!-- 编程趣事 -->
-			<div class="con_list" style="float: left; width: 315px;">
+			<div id="ul_amusing" class="con_list" style="float: left; width: 315px;">
 				<div class="nav-title">
 					<div class="nav-title-lift">编程趣事</div>
 					<div class="nav-title-right">
@@ -427,26 +452,7 @@ var _hmt = _hmt || [];
 					</div>
 				</div>
 				<ul>
-					<li><span class="num-top">1</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">2</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">3</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">4</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">5</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">6</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">7</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">8</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">9</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">10</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
+					
 				</ul>
 			</div>
 		</div>
@@ -456,7 +462,7 @@ var _hmt = _hmt || [];
 		<!-- 修改span时去 1.css 中删除  .con_4 .con_list li 属性。 -->
 		<div class="con_4">
 			<!-- 软件下载 -->
-			<div class="con_list" style="float: left; width: 315px;">
+			<div id="ul_down" class="con_list" style="float: left; width: 315px;">
 				<div class="nav-title">
 					<div class="nav-title-lift">软件下载</div>
 					<div class="nav-title-right">
@@ -464,30 +470,11 @@ var _hmt = _hmt || [];
 					</div>
 				</div>
 				<ul>
-					<li><span class="num-top">1</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">2</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">3</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">4</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">5</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">6</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">7</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">8</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">9</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">10</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
+					
 				</ul>
 			</div>
 			<!-- 源码分享 -->
-			<div class="con_list" style="float: left; width: 315px;">
+			<div id="ul_code" class="con_list" style="float: left; width: 315px;">
 				<div class="nav-title">
 					<div class="nav-title-lift">源码分享</div>
 					<div class="nav-title-right">
@@ -495,30 +482,11 @@ var _hmt = _hmt || [];
 					</div>
 				</div>
 				<ul>
-					<li><span class="num-top">1</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">2</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">3</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">4</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">5</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">6</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">7</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">8</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">9</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">10</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
+					
 				</ul>
 			</div>
 			<!-- 学习资料-->
-			<div class="con_list" style="float: left; width: 315px;">
+			<div id="ul_study" class="con_list" style="float: left; width: 315px;">
 				<div class="nav-title">
 					<div class="nav-title-lift">学习资料</div>
 					<div class="nav-title-right">
@@ -526,26 +494,7 @@ var _hmt = _hmt || [];
 					</div>
 				</div>
 				<ul>
-					<li><span class="num-top">1</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">2</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">3</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">4</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">5</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">6</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">7</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">8</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">9</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">10</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
+					
 				</ul>
 			</div>
 		</div>
