@@ -1,0 +1,50 @@
+h1 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-indent: 10px;
+    color: #eee;
+    background: url(../images/a2.gif) repeat-x;
+}
+
+.artlist {
+    border-radius: 6px;
+}
+
+.sidebar a, .artlist a {
+    color: #839b2e;
+    text-decoration: none;
+}
+
+.artlist span {
+    font-size: 12px;
+    margin-right: 5px;
+    color: #888;
+}
+
+.artlist ul li {
+    margin: 10px;
+    height: 45px;
+    border-bottom: 1px dashed #839b2e;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: rgb(131, 155, 46);
+}
+
+.pager {
+    height: 20px;
+    text-align: right;
+    padding: 5px 5px 15px 15px;
+}
+
+.pager .now-page {
+    margin: 5px 0px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
