@@ -306,7 +306,7 @@ var _hmt = _hmt || [];
 			<!-- 广告 -->
 			<div class="adshow"
 				style="width: 720px; height: 90px; background-color: gray;">
-				<p style="text-align: center; font-size: 25px; color: #000; padding-top: 20px;">广告位test</p> 
+				<p style="text-align: center; font-size: 25px; color: #000; padding-top: 20px;">广告位test ${list }</p> 
 				<form method="post" action="uuid2">
 					<textarea id="id_uuid"  onclick="uuid()" rows="1" cols="20"></textarea> 
 					<button style="height: 15px; width: 35px; " onclick="reset_uuid()"  value="重新获取uuid"></button>
@@ -523,7 +523,6 @@ var _hmt = _hmt || [];
 	</div>
 	
 
-	
 	
 </body>
 </html>
