@@ -46,7 +46,7 @@ public class ArticleServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		ArticleService articleService = new ArticleServiceImpl();
 		
-		ArrayList articleList = (ArrayList) articleService.queryArticle2("工作学习", 10, "article_date");
+		ArrayList articleList = (ArrayList) articleService.queryArticle("工作学习", 10, "article_date");
 		//Article article = (Article) arrayList.get(0);
 		Article article = null;
 		JSONObject json = new JSONObject();

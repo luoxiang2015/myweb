@@ -9,12 +9,24 @@
 <script type="text/javascript" src="resources/js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
+		
 		function(){
-			$.ajax(
+			
+			$.getJSON("/myweb/article/getTitle.do",function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].article_title);
+				  $("#ul_work ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].article_title +"</a></li>");
+				   });  
+				  
+				}); 
+			
+			
+			/* $.ajax(
 			{
-				url:"ArticleServlet",
+				url:"/myweb/article/getTitle.do",
 				type:"post",
-				dateType:"html",
+				dateType:"json",
 				error:function(){
 					alert("服务器没有返回数据");
 				},
@@ -27,11 +39,10 @@ $(document).ready(
 					}
 				}
 			}		
-			)
+			) */
 			
-		}
 		
-		);
+		});
 
 
 
@@ -405,26 +416,6 @@ var _hmt = _hmt || [];
 					</div>
 				</div>
 				<ul>
-			<!-- 		<li><span class="num-top">1</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">2</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">3</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">4</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">5</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">6</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">7</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">8</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">9</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li>
-					<li><span class="num-top">10</span><a title="测试文字"
-						href="**.jsp?id=123">测试文字测试文字 </a></li> -->
 				</ul>
 			</div>
 			<!-- 编程趣事 -->
