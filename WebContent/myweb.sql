@@ -23,7 +23,7 @@ CREATE TABLE `t_article` (
   `article_id` int(50) NOT NULL AUTO_INCREMENT,
   `article_author` varchar(100) NOT NULL,
   `article_title` varchar(255) DEFAULT NULL,
-  `article_content_url` varchar(255) DEFAULT NULL,
+  `article_content` varchar(255) DEFAULT NULL,
   `article_mark` varchar(255) NOT NULL,
   `article_date` date NOT NULL,
   PRIMARY KEY (`article_id`)

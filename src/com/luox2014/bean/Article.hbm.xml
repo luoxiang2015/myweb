@@ -9,7 +9,7 @@
 	</id>
 	
 	<property name="article_author"></property>
-	<property name="article_content_url"></property>
+	<property name="article_content"></property>
 	<property name="article_date"></property>
 	<property name="article_mark"></property>
 	<property name="article_title"></property>

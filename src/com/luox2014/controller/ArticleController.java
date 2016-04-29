@@ -21,7 +21,7 @@ public class ArticleController {
 	@RequestMapping(value="getTitle", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public List<Article> getArticleTitle(){
-		List<Article> retList = articleService.queryArticle("工作学习", 10, "article_date");
+		List<Article> retList = articleService.queryArticle(1, 10, "article_date");
 		return retList;
 	}
 	

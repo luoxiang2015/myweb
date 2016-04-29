@@ -32,7 +32,7 @@ public class ArticleDaoImpl implements ArticleDao{
 	}
 
 	@Override
-	public List<Article> queryArticle(String mark, int num, String sort) {
+	public List<Article> queryArticle(int mark, int num, String sort) {
 		// TODO Auto-generated method stub
 		Session session=null;
 		session =  sessionFactory.openSession();

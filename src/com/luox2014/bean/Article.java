@@ -6,8 +6,8 @@ public class Article {
 private String article_id;
 private String article_author;
 private String article_title;
-private String article_content_url;
-private String article_mark;
+private String article_content;
+private int article_mark;
 private Date article_date;
 public String getArticle_id() {
 	return article_id;
@@ -27,16 +27,16 @@ public String getArticle_title() {
 public void setArticle_title(String article_title) {
 	this.article_title = article_title;
 }
-public String getArticle_content_url() {
-	return article_content_url;
+public String getArticle_content() {
+	return article_content;
 }
-public void setArticle_content_url(String article_content_url) {
-	this.article_content_url = article_content_url;
+public void setArticle_content(String article_content) {
+	this.article_content = article_content;
 }
-public String getArticle_mark() {
+public int getArticle_mark() {
 	return article_mark;
 }
-public void setArticle_mark(String article_mark) {
+public void setArticle_mark(int article_mark) {
 	this.article_mark = article_mark;
 }
 public Date getArticle_date() {
@@ -45,6 +45,7 @@ public Date getArticle_date() {
 public void setArticle_date(Date article_date) {
 	this.article_date = article_date;
 }
+
 
 
 }

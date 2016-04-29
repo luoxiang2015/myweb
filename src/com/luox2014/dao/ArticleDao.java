@@ -7,6 +7,6 @@ import com.luox2014.bean.Article;
 public interface ArticleDao {
   public List<Article> queryArticleById(String article_id);
   
-  public List<Article> queryArticle(String mark, int num, String sort);
+  public List<Article> queryArticle(int mark, int num, String sort);
   
 }
