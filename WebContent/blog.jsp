@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="resources/css/1.css">
-<link rel="stylesheet" type="text/css" href="resources/css/2.css">
-<script type="text/javascript" src="resources/js/ScrollPic.js"></script>
-<script type="text/javascript" src="resources/js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/myweb/resources/css/1.css">
+<link rel="stylesheet" type="text/css" href="/myweb/resources/css/2.css">
+<script type="text/javascript" src="/myweb/resources/js/ScrollPic.js"></script>
+<script type="text/javascript" src="/myweb/resources/js/jquery-1.8.2.min.js"></script>
 
 <script>
 var _hmt = _hmt || [];
@@ -35,8 +35,8 @@ var _hmt = _hmt || [];
 			</div>
 			<div id="nav">
 				<ul>
-					<li><a href="index.jsp">首页</a></li>
-					<li class="sel"><a href="blog.jsp">博客</a></li>
+					<li><a href="/myweb/home/home.do">首页</a></li>
+					<li class="sel"><a href="/myweb/article/getBlog.do">博客</a></li>
 					<li><a href="photo.jsp">相册</a></li>
 					<li><a href="downlist.jsp">资源</a></li>
 					<li><a href="link.jsp">收藏</a></li>

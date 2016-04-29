@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="resources/css/1.css">
-<script type="text/javascript" src="resources/js/ScrollPic.js"></script>
-<script type="text/javascript" src="resources/js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/myweb/resources/css/1.css">
+<script type="text/javascript" src="/myweb/resources/js/ScrollPic.js"></script>
+<script type="text/javascript" src="/myweb/resources/js/jquery-1.8.2.min.js"></script>
 <script type="text/javascript">
 $(document).ready(
 		
@@ -119,8 +119,8 @@ var _hmt = _hmt || [];
 			</div>
 			<div id="nav">
 				<ul>
-					<li class="sel"><a href="index.jsp">首页</a></li>
-					<li><a href="blog.jsp">博客</a></li>
+					<li class="sel"><a href="/myweb/home/home.do">首页</a></li>
+					<li><a href="/myweb/article/getBlog.do">博客</a></li>
 					<li><a href="photo.jsp">相册</a></li>
 					<li><a href="downlist.jsp">资源</a></li>
 					<li><a href="link.jsp">收藏</a></li>
@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
 			<div id="side_1">
 				<dl>
 					<dt>
-						<img alt="新会员" src="resources/face/m01.jpg">
+						<img alt="新会员" src="/myweb/resources/face/m01.jpg">
 					</dt>
 					<dd>小罗</dd>
 					<dd>
@@ -148,7 +148,7 @@ var _hmt = _hmt || [];
 					</dd>
 					<dd style="margin-left: 0px;">
 						<a href="mailto:344506825@qq.com" target=""><img
-							alt="点击这里给我发邮件" src="resources/images/mail.gif"></a> <a
+							alt="点击这里给我发邮件" src="/myweb/resources/images/mail.gif"></a> <a
 							href="http://wpa.qq.com/msgrd?v=3&amp;uin=344506825&amp;site=qq&amp;menu=yes"
 							target=""><img alt="点击这里与我交谈"
 							src="http://wpa.qq.com/pa?p=2:344506825:41" title="Q:344506825"
@@ -197,7 +197,7 @@ var _hmt = _hmt || [];
 						站内文章检索： <input
 							style="width: 240px; height: 20px; border: 1px solid #999;"
 							name="keywords"></input> <input type="image"
-							src="resources/images/search_dot.jpg"></input>
+							src="/myweb/resources/images/search_dot.jpg"></input>
 					</form>
 				</div>
 				<p style="height: 100px; text-align: center;">
@@ -325,70 +325,70 @@ var _hmt = _hmt || [];
 						style="width: 630px; overflow: hidden;">
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接1</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接2</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接3</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接4</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接5</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接6</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接7</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接8</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接9</a>
 							</p>
 						</div>
 						<div class="box">
 							<a target="_blank" href="#"><img width="145" height="94"
-								alt="测试图片" src="TEMP/img/s20130916163847.jpg"></a>
+								alt="测试图片" src="/myweb/TEMP/img/s20130916163847.jpg"></a>
 							<p>
 								<a target="_blank" href="#">测试链接10</a>
 							</p>
