@@ -29,7 +29,7 @@
 				<ul>
 				<c:forEach var="model" items="${articleList}">
 				<li>
-						<h3> <a> ${model.title } </a></h3>
+						<h3> <a href="/myweb/article/getBlogDtl.do?id=${model.id }"> ${model.title } </a></h3>
 						<span>${model.date }</span>
 						<span>${model.author }</span>
 						<span>${model.content }</span>

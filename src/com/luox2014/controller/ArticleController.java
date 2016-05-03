@@ -27,16 +27,28 @@ public class ArticleController {
 	
 	/**
 	 * 首页文章标题加载
-	 * @param req
+	 * @param req code 文章类别  7、8、9 需要调用其他接口 请查询数据字典 /myweb/src/com/luox2014/util/Dictionary.java
 	 * @return
 	 */
 	@RequestMapping(value="getTitle", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public List<Article> getArticleTitle(HttpServletRequest req){
 		int code = Integer.parseInt(req.getParameter("code"));
-		List<Article> retList = articleService.queryArticle(code, 10, "article_date");
+		List<Article> retList;
+		switch (code) {
+		case 7:
+			//文章更新
+			retList = articleService.queryArticleTop(10);
+			break;
+
+		default:
+			retList = articleService.queryArticle(code, 10, "article_date");
+			break;
+		}
+		
 		return retList;
 	}
+	
 	
 	/**
 	 *  跳转博客页面

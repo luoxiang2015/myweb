@@ -67,6 +67,37 @@ $(document).ready(
 				  
 				});
 			
+			//文章更新
+			$.getJSON("/myweb/article/getTitle.do",{code:7},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].title);
+				  $("#ul_updata ul ").append("<li><span class=\"time\"></span><a title=\"测试文字\"href=\"/myweb/article/getBlogDtl.do?id="+data[i].id+"\">"+ data[i].title +"</a></li>");
+				   });  
+				});
+			
+			
+			//推荐文章
+			$.getJSON("/myweb/article/getTitle.do",{code:8},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].title);
+				  $("#ul_recommend ul ").append("<li><span class=\"time\"></span><a title=\"测试文字\"href=\"/myweb/article/getBlogDtl.do?id="+data[i].id+"\">"+ data[i].title +"</a></li>");
+				   });  
+				});
+			
+			
+			//下载排行
+			$.getJSON("/myweb/article/getTitle.do",{code:9},function(data){  
+				//此处返回的data已经是json对象  
+				   $.each(data,function(i){  
+				    console.log("name:"+data[i].title);
+				  $("#ul_down ul ").append("<li><span class=\"time\"></span><a title=\"测试文字\"href=\"/myweb/article/getBlogDtl.do?id="+data[i].id+"\">"+ data[i].title +"</a></li>");
+				   });  
+				});
+			
+			
+			
 			/* $.ajax(
 			{
 				url:"/myweb/article/getTitle.do",
@@ -136,6 +167,7 @@ $(document).ready(
 			<div class="nav-title">
 				<div class="nav-title-lift">微博秀</div>
 				<div class="nav-title-right"></div>
+				<!-- <img style="width:240px; margin-left: -20px;" alt="哈塞给" src="/myweb/resources/images/哈撒给.gif"> -->
 			</div>
 			<div id="side_3">
 				<iframe class="share_self" width="100%" height="300" frameborder="0"
@@ -181,28 +213,8 @@ $(document).ready(
 					<div class="nav-title-lift">文章更新</div>
 					<div class="nav-title-right"></div>
 				</div>
-				<div class="con_list l_con_3">
+				<div class="con_list l_con_3" id="ul_updata">
 					<ul>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
-						<li><span class="time">2014-10-14</span><a title="数据库误操作还原"
-							href="**.jsp?id=123">[经验总结] 数据库误操作还原 </a></li>
 					</ul>
 
 				</div>
@@ -215,32 +227,12 @@ $(document).ready(
 						<a class="more" href="blog.jsp">更多...</a>
 					</div>
 				</div>
-				<div class="con_list">
+				<div class="con_list" id="ul_recommend">
 					<ul>
-						<li><span class="num-top">1</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">2</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字</a></li>
-						<li><span class="num-top">3</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">4</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">5</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">6</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">7</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">8</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">9</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">10</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
 
 					</ul>
 				</div>
-				<div class="con_list">
+				<div class="con_list" id="ul_down">
 					<div class="nav-title">
 						<div class="nav-title-lift">下载排行</div>
 						<div class="nav-title-right">
@@ -248,26 +240,6 @@ $(document).ready(
 						</div>
 					</div>
 					<ul>
-						<li><span class="num-top">1</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">2</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字</a></li>
-						<li><span class="num-top">3</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">4</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">5</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">6</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">7</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">8</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">9</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
-						<li><span class="num-top">10</span><a title="测试文字"
-							href="**.jsp?id=123">测试文字测试文字 </a></li>
 					</ul>
 				</div>
 			</div>
