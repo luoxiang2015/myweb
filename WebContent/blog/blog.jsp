@@ -32,7 +32,7 @@
 						<h3> <a href="/myweb/article/getBlogDtl.do?id=${model.id }"> ${model.title } </a></h3>
 						<span>${model.date }</span>
 						<span>${model.author }</span>
-						<span>${model.content }</span>
+						<%-- <span>${model.content }</span> --%>
 						
 					</li>
 				</c:forEach>

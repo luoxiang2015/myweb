@@ -42,7 +42,7 @@ public class ArticleController {
 			break;
 
 		default:
-			retList = articleService.queryArticle(code, 10, "article_date");
+			retList = articleService.queryArticle(code, 10, "ART_Date");
 			break;
 		}
 		
