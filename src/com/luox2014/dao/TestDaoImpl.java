@@ -24,7 +24,7 @@ public class TestDaoImpl implements TestDao{
 		
 		Session s = sessionFactory.openSession();
 		
-		Query q = s.createSQLQuery("select * from t_article where article_mark ='"+ "工作学习"+"' order by '"+"article_date"+"' desc limit "+10).addEntity(Article.class);
+		Query q = s.createSQLQuery("select * from T_Article where ART_Mark ='"+ "工作学习"+"' order by '"+"ART_Date"+"' desc limit "+10).addEntity(Article.class);
 		@SuppressWarnings("unchecked")
 		ArrayList<Article> articleList= (ArrayList<Article>) q.list();
 		s.close();

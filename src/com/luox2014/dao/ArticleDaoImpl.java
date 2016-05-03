@@ -21,10 +21,10 @@ public class ArticleDaoImpl implements ArticleDao{
 	
 
 	@Override
-	public List<Article> queryArticleById(String article_id) {
+	public List<Article> queryArticleById(String id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
-		Query q = session.createSQLQuery("select * from t_article where article_id ="+ article_id).addEntity(Article.class);
+		Query q = session.createSQLQuery("select * from T_Article where ART_ID ="+ id).addEntity(Article.class);
 		@SuppressWarnings("unchecked")
 		ArrayList<Article> articleList= (ArrayList<Article>) q.list();
 		session.close();
@@ -36,7 +36,7 @@ public class ArticleDaoImpl implements ArticleDao{
 		// TODO Auto-generated method stub
 		Session session=null;
 		session =  sessionFactory.openSession();
-		Query q = session.createSQLQuery("select * from t_article where article_mark ='"+ mark+"' order by '"+sort+"' desc limit "+num).addEntity(Article.class);
+		Query q = session.createSQLQuery("select * from T_Article where ART_Mark ='"+ mark+"' order by '"+sort+"' desc limit "+num).addEntity(Article.class);
 			@SuppressWarnings("unchecked")
 			ArrayList<Article> articleList= (ArrayList<Article>) q.list();
 			session.close();
@@ -47,7 +47,7 @@ public class ArticleDaoImpl implements ArticleDao{
 	public List<Article> queryArticleTop(int sum) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
-		Query q = session.createSQLQuery("SELECT * FROM t_article ORDER BY create_time desc LIMIT "+sum).addEntity(Article.class);
+		Query q = session.createSQLQuery("SELECT * FROM T_Article ORDER BY ART_Create_Time desc LIMIT "+sum).addEntity(Article.class);
 		ArrayList<Article> articleList= (ArrayList<Article>) q.list();
 		session.close();
         return articleList;

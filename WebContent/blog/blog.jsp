@@ -29,10 +29,10 @@
 				<ul>
 				<c:forEach var="model" items="${articleList}">
 				<li>
-						<h3> <a> ${model.article_title } </a></h3>
-						<span>${model.article_date }</span>
-						<span>${model.article_author }</span>
-						<span>${model.article_content }</span>
+						<h3> <a> ${model.title } </a></h3>
+						<span>${model.date }</span>
+						<span>${model.author }</span>
+						<span>${model.content }</span>
 						
 					</li>
 				</c:forEach>

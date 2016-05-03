@@ -52,7 +52,7 @@ public class ArticleServlet extends HttpServlet {
 		JSONObject json = new JSONObject();
 		for(int i = 0;i<articleList.size();i++){
 			 article = (Article) articleList.get(i);
-			json.put("ArticleTitle",  article.getArticle_title());
+			json.put("ArticleTitle",  article.getTitle());
 		}
 		//String txt = "{\"Article\":[" + json+"]}";
 		System.out.println(json);

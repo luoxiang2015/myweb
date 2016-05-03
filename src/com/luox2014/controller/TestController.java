@@ -22,7 +22,7 @@ public class TestController {
 	@RequestMapping(value="/test", produces ="application/json;charset=UTF-8")
 	@ResponseBody
 	public List<Article> test(){
-		System.out.println(testService.Test().get(0).getArticle_author());
+		System.out.println(testService.Test().get(0).getAuthor());
 		return testService.Test();
 		//浏览器乱码 右键点击查看源代码
 	}

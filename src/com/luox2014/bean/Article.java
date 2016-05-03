@@ -5,54 +5,54 @@ import java.util.Date;
 
 
 public class Article {
-private String article_id;
-private String article_author;
-private String article_title;
-private String article_content;
-private int article_mark;
-private Date article_date;
-private Timestamp create_time;
-public String getArticle_id() {
-	return article_id;
+private String id;
+private String author;
+private String title;
+private String content;
+private int mark;
+private Date date;
+private Timestamp createTime;
+public String getId() {
+	return id;
 }
-public void setArticle_id(String article_id) {
-	this.article_id = article_id;
+public void setId(String id) {
+	this.id = id;
 }
-public String getArticle_author() {
-	return article_author;
+public String getAuthor() {
+	return author;
 }
-public void setArticle_author(String article_author) {
-	this.article_author = article_author;
+public void setAuthor(String author) {
+	this.author = author;
 }
-public String getArticle_title() {
-	return article_title;
+public String getTitle() {
+	return title;
 }
-public void setArticle_title(String article_title) {
-	this.article_title = article_title;
+public void setTitle(String title) {
+	this.title = title;
 }
-public String getArticle_content() {
-	return article_content;
+public String getContent() {
+	return content;
 }
-public void setArticle_content(String article_content) {
-	this.article_content = article_content;
+public void setContent(String content) {
+	this.content = content;
 }
-public int getArticle_mark() {
-	return article_mark;
+public int getMark() {
+	return mark;
 }
-public void setArticle_mark(int article_mark) {
-	this.article_mark = article_mark;
+public void setMark(int mark) {
+	this.mark = mark;
 }
-public Date getArticle_date() {
-	return article_date;
+public Date getDate() {
+	return date;
 }
-public void setArticle_date(Date article_date) {
-	this.article_date = article_date;
+public void setDate(Date date) {
+	this.date = date;
 }
-public Timestamp getCreate_time() {
-	return create_time;
+public Timestamp getCreateTime() {
+	return createTime;
 }
-public void setCreate_time(Timestamp create_time) {
-	this.create_time = create_time;
+public void setCreateTime(Timestamp createTime) {
+	this.createTime = createTime;
 }
 
 
