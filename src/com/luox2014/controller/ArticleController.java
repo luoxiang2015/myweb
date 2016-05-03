@@ -37,7 +37,13 @@ public class ArticleController {
 		List<Article> retList = articleService.queryArticle(code, 10, "article_date");
 		return retList;
 	}
-	//向前端返回值 可以通过request 或者 ModelAndView
+	
+	/**
+	 *  跳转博客页面
+	 * //向前端返回值 可以通过request 或者 ModelAndView
+	 * @param req
+	 * @return
+	 */
 	@RequestMapping(value="getBlog")
 	public ModelAndView getBlogHtml(HttpServletRequest req){
 		
@@ -45,7 +51,16 @@ public class ArticleController {
 		ModelMap model = new ModelMap();
 		model.addAttribute("articleList", list);
 		
-		return new ModelAndView("blog",model);
+		return new ModelAndView("/blog/blog",model);
+	}
+	
+	/**
+	 * 跳转文章详情页面
+	 * @return
+	 */
+	public ModelAndView getBlogContent(){
+		return null;
+		
 	}
 	
 
