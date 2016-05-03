@@ -58,8 +58,13 @@ public class ArticleController {
 	 * 跳转文章详情页面
 	 * @return
 	 */
-	public ModelAndView getBlogContent(){
-		return null;
+	@RequestMapping(value="getBlogDtl")
+	public ModelAndView getBlogContent(HttpServletRequest req){
+		String id = req.getParameter("id");
+		Article article = articleService.queryArticleById(id);
+		ModelMap model = new ModelMap();
+		model.put("article", article);
+		return new ModelAndView("/blog/article",model);
 		
 	}
 	

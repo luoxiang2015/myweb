@@ -11,7 +11,7 @@ public interface ArticleService {
 	 * @param article_id
 	 * @return
 	 */
-	public List<Article> queryArticleById(String id);
+	public Article queryArticleById(String id);
            
 	/**
 	 * //通过mark  、 日期排序、选择前几行

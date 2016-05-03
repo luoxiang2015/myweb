@@ -21,14 +21,13 @@ public class ArticleDaoImpl implements ArticleDao{
 	
 
 	@Override
-	public List<Article> queryArticleById(String id) {
+	public Article queryArticleById(String id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
 		Query q = session.createSQLQuery("select * from T_Article where ART_ID ="+ id).addEntity(Article.class);
-		@SuppressWarnings("unchecked")
-		ArrayList<Article> articleList= (ArrayList<Article>) q.list();
+		Article article=  (Article) q.uniqueResult();
 		session.close();
-		return articleList;
+		return article;
 	}
 
 	@Override

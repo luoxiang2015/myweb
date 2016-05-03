@@ -16,7 +16,7 @@ $(document).ready(
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].title);
-				  $("#ul_work ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
+				  $("#ul_work ul").append("<li><span class=\"num-top\">"+data[i].id+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
 				   });  
 				  
 				}); 
@@ -25,7 +25,7 @@ $(document).ready(
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].title);
-				  $("#ul_mood ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
+				  $("#ul_mood ul").append("<li><span class=\"num-top\">"+data[i].id+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
 				   });  
 				  
 				}); 
@@ -34,7 +34,7 @@ $(document).ready(
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].title);
-				  $("#ul_amusing ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
+				  $("#ul_amusing ul").append("<li><span class=\"num-top\">"+data[i].id+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
 				   });  
 				  
 				}); 
@@ -44,7 +44,7 @@ $(document).ready(
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].title);
-				  $("#ul_down ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
+				  $("#ul_down ul").append("<li><span class=\"num-top\">"+data[i].id+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
 				   });  
 				  
 				});
@@ -53,7 +53,7 @@ $(document).ready(
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].title);
-				  $("#ul_code ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
+				  $("#ul_code ul").append("<li><span class=\"num-top\">"+data[i].id+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
 				   });  
 				  
 				});
@@ -62,7 +62,7 @@ $(document).ready(
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].title);
-				  $("#ul_study ul").append("<li><span class=\"num-top\">"+(i+1)+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
+				  $("#ul_study ul").append("<li><span class=\"num-top\">"+data[i].id+"</span><a title=\"测试文字\"href=\"**.jsp?id=123\">"+ data[i].title +"</a></li>");
 				   });  
 				  
 				});

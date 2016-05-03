@@ -16,7 +16,7 @@ public class ArticleServiceImpl implements ArticleService {
 	private ArticleDao articleDao;
 
 	@Override
-	public List<Article> queryArticleById(String id) {
+	public Article queryArticleById(String id) {
 		// TODO Auto-generated method stub
 		return articleDao.queryArticleById(id);
 	}
