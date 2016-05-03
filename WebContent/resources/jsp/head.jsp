@@ -12,7 +12,7 @@
 		<div id="head">
 			<div id="logo">
 				<div class="lg"></div>
-				<h3><!-- 小罗的个人博客 --></h3>
+				<h3>小罗的个人博客</h3>
 			</div>
 			<div id="nav">
 				<ul>
