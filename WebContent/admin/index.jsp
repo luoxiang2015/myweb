@@ -1587,7 +1587,21 @@
 
 					<div class="span12">
 
-						Blank page content goes here
+						<!-- Blank page content goes here -->
+						
+						<div class="control-group">
+
+										<label class="control-label">WYSIHTML5 Editor 1</label>
+
+										<div class="controls">
+
+											<textarea class="span12 wysihtml5 m-wrap" rows="6"></textarea>
+
+										</div>
+
+									</div>
+									
+									
 
 					</div>
 
