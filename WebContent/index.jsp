@@ -44,7 +44,7 @@ $(document).ready(
 				//此处返回的data已经是json对象  
 				   $.each(data,function(i){  
 				    console.log("name:"+data[i].title);
-				  $("#ul_down ul").append("<li><span class=\"num-top\"></span><a title=\"测试文字\"href=\"/myweb/article/getBlogDtl.do?id="+data[i].id+"\">"+ data[i].title +"</a></li>");
+				  $("#ul_soft ul").append("<li><span class=\"num-top\"></span><a title=\"测试文字\"href=\"/myweb/article/getBlogDtl.do?id="+data[i].id+"\">"+ data[i].title +"</a></li>");
 				   });  
 				  
 				});
@@ -404,7 +404,7 @@ $(document).ready(
 		<!-- 修改span时去 1.css 中删除  .con_4 .con_list li 属性。 -->
 		<div class="con_4">
 			<!-- 软件下载 -->
-			<div id="ul_down" class="con_list" style="float: left; width: 315px;">
+			<div id="ul_soft" class="con_list" style="float: left; width: 315px;">
 				<div class="nav-title">
 					<div class="nav-title-lift">软件下载</div>
 					<div class="nav-title-right">
