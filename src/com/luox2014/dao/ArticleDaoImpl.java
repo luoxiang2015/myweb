@@ -8,10 +8,11 @@ import javax.annotation.Resource;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import com.luox2014.bean.Article;
-import com.luox2014.util.HibernateTool;
+
 
 @Repository("articleDao")
 public class ArticleDaoImpl implements ArticleDao{
@@ -24,8 +25,12 @@ public class ArticleDaoImpl implements ArticleDao{
 	public Article queryArticleById(String id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
 		Query q = session.createSQLQuery("select * from T_Article where ART_ID ="+ id).addEntity(Article.class);
 		Article article=  (Article) q.uniqueResult();
+		//session.flush();
+		//session.clear();
+		tx.commit();
 		session.close();
 		return article;
 	}
@@ -35,9 +40,13 @@ public class ArticleDaoImpl implements ArticleDao{
 		// TODO Auto-generated method stub
 		Session session=null;
 		session =  sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
 		Query q = session.createSQLQuery("select * from T_Article where ART_Mark ='"+ mark+"' order by '"+sort+"' desc limit "+num).addEntity(Article.class);
 			@SuppressWarnings("unchecked")
 			ArrayList<Article> articleList= (ArrayList<Article>) q.list();
+			//session.flush();
+			//session.clear();
+			tx.commit();
 			session.close();
             return articleList;
 	}
@@ -46,8 +55,13 @@ public class ArticleDaoImpl implements ArticleDao{
 	public List<Article> queryArticleTop(int sum) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
 		Query q = session.createSQLQuery("SELECT * FROM T_Article ORDER BY ART_Create_Time DESC LIMIT "+sum).addEntity(Article.class);
+		q.setCacheable(false);
 		ArrayList<Article> articleList= (ArrayList<Article>) q.list();
+		//session.flush();
+		//session.clear();
+		tx.commit();
 		session.close();
         return articleList;
 	}

@@ -2,6 +2,8 @@ package com.luox2014.service;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.luox2014.bean.Article;
 
 public interface ArticleService {
