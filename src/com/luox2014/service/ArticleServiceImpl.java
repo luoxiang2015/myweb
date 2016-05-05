@@ -40,9 +40,9 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
-	public String saveArticle(String content) {
+	public String saveArticle(Article article) {
 		// TODO Auto-generated method stub
-		return articleDao.saveArticle(content);
+		return articleDao.saveArticle(article);
 	}
 
 	

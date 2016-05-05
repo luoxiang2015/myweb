@@ -34,7 +34,13 @@
         {
         	url:"/myweb/article/saveBlog.do",
         	type:"post",
-        	data:{content:UE.getEditor('container').getContent()},
+        	data:{
+        		author:'lx',
+        		content:UE.getEditor('container').getContent(),
+        		mark:'3',
+        		title: '固定标题'
+        			
+        	},
         	dateType:"json",
         	success:function(data){
         		alert(data);

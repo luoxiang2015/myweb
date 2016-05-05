@@ -1,5 +1,7 @@
 package com.luox2014.controller;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -88,10 +90,15 @@ public class ArticleController {
 	@RequestMapping(value="saveBlog", method = {RequestMethod.GET, RequestMethod.POST})
 	@ResponseBody
 	public String saveArticle(HttpServletRequest req){
-		String content = req.getParameter("content");
-		articleService.saveArticle(content);
-		System.out.println(content);
-		return "fail";
+		Article article = new Article();
+		article.setAuthor(req.getParameter("author"));
+		article.setContent(req.getParameter("content"));
+		java.sql.Date date=new java.sql.Date(new java.util.Date().getTime()); 
+		article.setDate(date);
+		article.setMark(Integer.valueOf(req.getParameter("mark")));
+		article.setTitle(req.getParameter("title"));
+		
+		return articleService.saveArticle(article);
 	}
 	
 

@@ -34,9 +34,9 @@ public interface ArticleService {
 	
 	/**
 	 * 保存文章
-	 * @param content
+	 * @param article
 	 * @return
 	 */
-	public String saveArticle(String content);
+	public String saveArticle(Article article);
   
 }
