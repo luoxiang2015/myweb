@@ -7,6 +7,13 @@
 <title>日志管理</title>
 </head>
 <body>
+  标题
+    <input id="articleTitle" value=""/>
+    作者
+    <input id="articleAuthor"  value=""/>
+    分类
+    <input id="articleMarkqq" value=""/>
+    
     <!-- 加载编辑器的容器 -->
     <script id="container" name="content" type="text/plain">
         这里写你的初始化内容
@@ -27,6 +34,7 @@
 	</div>
 	
 	<script type="text/javascript">
+	
 	function submit(){
        //var content =  UE.getEditor('container').getContent();
        // alert(content);
@@ -35,10 +43,10 @@
         	url:"/myweb/article/saveBlog.do",
         	type:"post",
         	data:{
-        		author:'lx',
-        		content:UE.getEditor('container').getContent(),
-        		mark:'3',
-        		title: '固定标题'
+        		author:$("#articleAuthor").val(),
+        		markqq : $("#articleMarkqq").val(),
+        		title: $("#articleTitle").val(),
+        		content:UE.getEditor('container').getContent()
         			
         	},
         	dateType:"json",

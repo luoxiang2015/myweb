@@ -95,7 +95,9 @@ public class ArticleController {
 		article.setContent(req.getParameter("content"));
 		java.sql.Date date=new java.sql.Date(new java.util.Date().getTime()); 
 		article.setDate(date);
-		article.setMark(Integer.valueOf(req.getParameter("mark")));
+		System.out.println(req.getParameter("markqq"));
+		System.out.println(Integer.parseInt(req.getParameter("markqq")));
+		article.setMark(Integer.parseInt(req.getParameter("markqq")));
 		article.setTitle(req.getParameter("title"));
 		
 		return articleService.saveArticle(article);
