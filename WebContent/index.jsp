@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 百度广告  -->
+<meta name="baidu_union_verify" content="0bdb3a51ef4a97870364e70742d67f70">
 <link rel="stylesheet" type="text/css" href="/myweb/resources/css/1.css">
 <script type="text/javascript" src="/myweb/resources/js/ScrollPic.js"></script>
 <script type="text/javascript" src="/myweb/resources/js/jquery-1.8.2.min.js"></script>
