@@ -12,5 +12,7 @@ public interface ArticleDao {
 
 	public List<Article> queryArticleTop(int sum);
 
+	public String saveArticle(String content);
+
 
 }

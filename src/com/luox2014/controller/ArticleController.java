@@ -80,5 +80,19 @@ public class ArticleController {
 		
 	}
 	
+	/**
+	 * 保存文章
+	 * @param req
+	 * @return
+	 */
+	@RequestMapping(value="saveBlog", method = {RequestMethod.GET, RequestMethod.POST})
+	@ResponseBody
+	public String saveArticle(HttpServletRequest req){
+		String content = req.getParameter("content");
+		articleService.saveArticle(content);
+		System.out.println(content);
+		return "fail";
+	}
+	
 
 }

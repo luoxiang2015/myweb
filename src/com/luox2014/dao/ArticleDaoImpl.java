@@ -66,6 +66,23 @@ public class ArticleDaoImpl implements ArticleDao{
         return articleList;
 	}
 
+	@Override
+	public String saveArticle(String content) {
+		// TODO Auto-generated method stub
+		Article article = new Article();
+		article.setAuthor("lx");
+		article.setContent(content);
+		article.setMark(4);
+		article.setTitle("title");
+		Session session = sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
+		session.save(article);
+		tx.commit();
+		session.close();
+		
+		return null;
+	}
+
 
 
 }

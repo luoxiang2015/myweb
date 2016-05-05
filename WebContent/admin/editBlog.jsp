@@ -11,13 +11,39 @@
     <script id="container" name="content" type="text/plain">
         这里写你的初始化内容
     </script>
+    <script type="text/javascript" src="/myweb/resources/js/jquery-1.8.2.min.js"></script>
     <!-- 配置文件 -->
     <script type="text/javascript" src="/myweb/resources/jsp/ueditor/ueditor.config.js"></script>
     <!-- 编辑器源码文件 -->
     <script type="text/javascript" src="/myweb/resources/jsp/ueditor/ueditor.all.js"></script>
     <!-- 实例化编辑器 -->
     <script type="text/javascript">
-        var ue = UE.getEditor('container');
+        var ue = UE.getEditor('container', {
+            autoHeight: false
+        });
     </script>
+	<div id="btns">
+		<button onclick="submit()">提交文本</button>
+	</div>
+	
+	<script type="text/javascript">
+	function submit(){
+       //var content =  UE.getEditor('container').getContent();
+       // alert(content);
+        $.ajax(
+        {
+        	url:"/myweb/article/saveBlog.do",
+        	type:"post",
+        	data:{content:UE.getEditor('container').getContent()},
+        	dateType:"json",
+        	success:function(data){
+        		alert(data);
+        	}
+        	
+        }		
+        )
+	}
+	</script>
+	
 </body>
 </html>

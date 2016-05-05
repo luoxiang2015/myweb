@@ -39,6 +39,12 @@ public class ArticleServiceImpl implements ArticleService {
 		return articleDao.queryArticleTop(sum);
 	}
 
+	@Override
+	public String saveArticle(String content) {
+		// TODO Auto-generated method stub
+		return articleDao.saveArticle(content);
+	}
+
 	
 
 

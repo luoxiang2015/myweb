@@ -3,7 +3,6 @@ package com.luox2014.bean;
 import java.sql.Timestamp;
 import java.util.Date;
 
-
 public class Article {
 private String id;
 private String author;

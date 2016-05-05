@@ -31,5 +31,12 @@ public interface ArticleService {
 	 * @return
 	 */
 	public List<Article> queryArticleTop(int sum);
+	
+	/**
+	 * 保存文章
+	 * @param content
+	 * @return
+	 */
+	public String saveArticle(String content);
   
 }
