@@ -179,11 +179,12 @@ $(document).ready(
 			</div>
 			<!-- 天气插件  <script type="text/javascript" src="http://ext.weather.com.cn/87980.js"></script> -->
 			<div id="side_1">
-				<div>
+				<!-- <div>
 					<iframe src="http://ext.weather.com.cn/44053.html" scrolling="no"
 						style="z-index: 99999; width: 190px; height: 170px; border: 0px none;"
 						frameborder="0"></iframe>
-				</div>
+				</div> -->
+				<iframe width="238" scrolling="no" height="170" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=8&icon=1&py=shanghai&num=3"></iframe>
 			</div>
 		</div>
 		<!-- left end -->
