@@ -12,7 +12,7 @@
     作者
     <input id="articleAuthor"  value=""/>
     分类
-    <input id="articleMarkqq" value=""/>
+    <input id="articleMark" value=""/>
     
     <!-- 加载编辑器的容器 -->
     <script id="container" name="content" type="text/plain">
@@ -44,7 +44,7 @@
         	type:"post",
         	data:{
         		author:$("#articleAuthor").val(),
-        		markqq : $("#articleMarkqq").val(),
+        		mark : $("#articleMark").val(),
         		title: $("#articleTitle").val(),
         		content:UE.getEditor('container').getContent()
         			

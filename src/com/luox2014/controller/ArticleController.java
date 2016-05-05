@@ -1,15 +1,11 @@
 package com.luox2014.controller;
 
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -95,9 +91,7 @@ public class ArticleController {
 		article.setContent(req.getParameter("content"));
 		java.sql.Date date=new java.sql.Date(new java.util.Date().getTime()); 
 		article.setDate(date);
-		System.out.println(req.getParameter("markqq"));
-		System.out.println(Integer.parseInt(req.getParameter("markqq")));
-		article.setMark(Integer.parseInt(req.getParameter("markqq")));
+		article.setMark(Integer.parseInt(req.getParameter("mark")));
 		article.setTitle(req.getParameter("title"));
 		
 		return articleService.saveArticle(article);
